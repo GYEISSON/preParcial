@@ -1,7 +1,11 @@
 package preParcial;
+
 import java.util.*;
+
 public class MaterTraining {
+	
 	public int UNDEFINED;
+	
 	private ArrayList<Trainer> trainers;
 	private ArrayList<Plan> planes;
 	private ArrayList<Cyclist> cyclist;
