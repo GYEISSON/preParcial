@@ -5,7 +5,7 @@ public class Intensive extends Plan{
 	Intensive(){
 	
 	}
-	public void evaluate(){
+	public boolean evaluate(){
 		for(Week w: weeks){
 			w.evaluate();
 		}

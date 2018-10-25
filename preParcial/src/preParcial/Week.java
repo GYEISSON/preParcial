@@ -7,7 +7,7 @@ public class Week{
 		sessiones = new ArrayList<Session>();
 	}
 	
-	public void evaluate(){
+	public boolean evaluate(){
 		for(Session s: sessiones){
 			s.evaluate();
 			
