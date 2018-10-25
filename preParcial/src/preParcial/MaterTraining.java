@@ -1,11 +1,8 @@
 package preParcial;
-
 import java.util.*;
 
 public class MaterTraining {
-	
 	public int UNDEFINED;
-	
 	private ArrayList<Trainer> trainers;
 	private ArrayList<Plan> planes;
 	private ArrayList<Cyclist> cyclist;
@@ -18,10 +15,23 @@ public class MaterTraining {
 	}
 	
 	public void evaluatePlan(long number) {
-		for(Plan p: planes) {
-			if(p instanceof Easy) {
-				
+
+		if(findPlan(number)) {
+			for(Plan p: planes) {
+				if(p.getNumber()== number) {
+					p.evaluate();	
+				}
 			}
 		}
+		else {
+			System.out.println("El plan no esta");
+		}		
+	}
+	
+	private boolean findPlan(long number) {	
+		for(Plan p:planes){
+			if(p.getNumber()==number) return true;
+		}
+		return false;
 	}
 }

@@ -6,17 +6,17 @@ public abstract class Plan {
 	
 	protected long number;
 	protected boolean active;
-	protected String Typet;
+	protected ArrayList<Week> weeks;
 	
 	public Plan() {
 		number = 0;
-		Typet = "Intensive" ;
 		active = true;
+		weeks = new ArrayLits<Plan>();
 	}
 
 	public abstract  void inactive();
+	public abstract void evaluate();
 	
-	public String getType(){ return Typet; }
 	public long getNumber(){ return number; }
 	public boolean state(){  return active; }
 }
