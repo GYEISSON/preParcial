@@ -7,12 +7,18 @@ public class Week{
 		sessiones = new ArrayList<Session>();
 	}
 	
-	public boolean evaluate(){
+	public boolean evaluateIntensive(){
 		boolean bol = true;
 		for(Session s: sessiones){
-			bol = bol && s.evaluate();
+			bol = bol && s.evaluateIntensive();
 		}
 		return bol;
 	}
-
+	public boolean evaluateEasy(){
+		boolean bol = true;
+		for(Session s: sessiones){
+			bol = bol && s.evaluateEasy();
+		}
+		return bol;
+	}
 }
