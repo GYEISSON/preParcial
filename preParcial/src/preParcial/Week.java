@@ -8,10 +8,11 @@ public class Week{
 	}
 	
 	public boolean evaluate(){
+		boolean bol = true;
 		for(Session s: sessiones){
-			s.evaluate();
-			
+			bol = bol && s.evaluate();
 		}
+		return bol;
 	}
 
 }

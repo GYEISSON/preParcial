@@ -11,11 +11,11 @@ public abstract class Plan {
 	public Plan() {
 		number = 0;
 		active = true;
-		weeks = new ArrayLits<Plan>();
+		weeks = new ArrayList<Week>();
 	}
 
 	public abstract  void inactive();
-	public abstract void evaluate();
+	public abstract boolean evaluate();
 	
 	public long getNumber(){ return number; }
 	public boolean state(){  return active; }

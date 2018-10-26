@@ -6,9 +6,14 @@ public class Intensive extends Plan{
 	
 	}
 	public boolean evaluate(){
+		boolean bol= true;
 		for(Week w: weeks){
-			w.evaluate();
+			bol = bol && w.evaluate();
 		}
+		return bol;
+	}
+	public void inactive() {
+		active=false;
 	}
 
 }
