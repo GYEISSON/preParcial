@@ -9,10 +9,12 @@ public class Session{
 	public void newActivity(){
 		activity = new Activity();
 	}
-	
+	//retorna si la secion es saludable      
 	public boolean evaluate(){
-		if(activity!= null){
-			activity.evaluate();
+		float[] list = activity.promedios();
+		if((int)list[0]>=120 && (int)list[0]<=140 && (int)list[1]>85) {
+			return true;
 		}
+		return false;
 	}
 }

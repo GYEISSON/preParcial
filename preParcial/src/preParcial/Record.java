@@ -4,15 +4,14 @@ import java.util.*;
 public class Record{
 	private int beats,power;
 	private float speed;
-	private Instant time;
+	private double time;
 	
 	Record(){
-		
-	}
-	
-	public boolean evaluate(){
-		
+		beats = power= 0;
+		speed = 3;
+		time =  0.55;
 	}
 
-
+	public int getBeats() {return beats;}
+	public float getSpeed() {return speed;}
 }
