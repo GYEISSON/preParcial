@@ -16,22 +16,15 @@ public class MaterTraining {
 	
 	public void evaluatePlan(long number) {
 
-		if(findPlan(number)) {
+		try{
 			for(Plan p: planes) {
 				if(p.getNumber()== number) {
 					p.evaluate();	
 				}
 			}
 		}
-		else {
-			System.out.println("El plan no esta");
-		}		
+		catch()
+				
 	}
 	
-	private boolean findPlan(long number) {	
-		for(Plan p:planes){
-			if(p.getNumber()==number) return true;
-		}
-		return false;
-	}
 }
